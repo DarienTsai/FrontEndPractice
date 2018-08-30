@@ -1,0 +1,326 @@
+/*Did not use variables*/
+@import url('https://fonts.googleapis.com/css?family=Muli');
+/*Generics*/
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    transition-duration: 0.3s;
+    overflow-x: hidden;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+}
+
+/*animate*/
+@keyframes fadeUp{
+    from{transform: translateY(60px); opacity: 0; }
+    to{transform: none; opacity: 1;}
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes bob{
+    from{transform: translateY(-20px);}
+    to{transform: translateY(20px);}
+}
+@keyframes down{
+    from{
+        top: -100vh
+    }
+    to{
+        top: 0
+    }
+}
+
+/*layout and styling*/
+nav, header, section, footer{
+    width: 100%;
+}
+
+/*Signing*/
+.in{
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: down 0.5s 1 forwards;
+    background: rgb(255, 93, 93);
+}
+input{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    border: none;
+    outline: none;
+    padding: 2%;
+    background: none;
+    font-size: 2em;
+    border-bottom: 3px solid rgb(173, 173, 173);
+    width: 30%;
+    text-overflow: ellipsis;
+}
+input:focus{
+    width: 90%;
+    font-size: 2.5em;
+    border-bottom: 3px solid rgb(99, 231, 169);
+}
+.off{
+    display: none;
+}
+.active{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade 0.3s 1;
+}
+#popup{
+    background: rgb(245, 245, 245);
+    width: 35vw;
+    height: 60vh;
+    padding: 3%;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.192);
+}
+#controls{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#controls p{
+    height: fit-content;
+    padding: 0.9%;
+    font-size: 1.5em;
+    color: rgb(46, 46, 46);
+    width: 50%;
+    border-bottom: 3px solid rgb(180, 180, 180);
+    cursor: pointer;
+}
+#controls p.on{
+    border-bottom: 3px solid rgb(255, 93, 93);
+}
+#form{
+    height: 55%;
+    overflow: visible;
+}
+.formed{
+    animation: fade 0.3s 1;
+}
+#start{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#start-button{
+    width: fit-content;
+    height: fit-content;
+    font-size: 3em;
+    color: white;
+    background: rgb(255, 218, 7);
+    padding: 2%;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.157);
+    border-radius: 7px
+}
+#start-button:hover{
+    transform: scale(1.1);
+    color: white;
+}
+#start-button:active{
+    background: rgb(240, 205, 12);
+    color: rgb(235, 240, 166);
+}
+#close{
+    cursor: pointer;
+    padding: 2%;
+}
+
+/*Page*/
+nav{
+    height: fit-content;
+    background-color: rgb(255, 93, 93);
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+nav a{
+    padding: 0.8% 1.8%;
+    font-size: 1.7em;
+    color: rgb(255, 216, 216);
+    font-style: none;
+    text-decoration: none;
+}
+nav a:hover{
+    padding: 0.8% 5%;
+    background-color: rgb(255, 117, 117);
+    color: rgb(240, 229, 229);
+}
+header{
+    background-color: rgb(99, 231, 169);
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: none;
+    justify-content: center;
+}
+#header-left{
+    height: 100%;
+    width: 50%;
+    background-image: url(yaw.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    opacity: 0;
+    animation: fadeUp 0.7s 1 forwards;
+}
+#header-right{
+    width: 50%;
+    height: 100%;
+}
+#header-right h1{
+    padding-top:20vh;
+    opacity: 0;
+    font-size: 15vw;
+    color: rgb(231, 243, 237);
+    width: 100%;
+    animation: fadeUp 0.5s 0.2s 1 forwards;
+}
+#header-right p{
+    font-size: 1.5vw;
+    opacity: 0;
+    color: rgb(231, 243, 237);
+    width: 100%;
+    animation: fadeUp 0.3s 0.3s 1 forwards;
+}
+
+#logins{
+    padding-top: 5vh;
+    height: fit-content;
+    opacity: 0;
+    overflow: visible;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 1.7vw;
+    animation: fadeUp 0.7s 0.3s 1 forwards;
+}
+#logins a{
+    width: fit-content;
+    height: fit-content;
+    padding: 1.6%;
+    color: rgb(255, 255, 228);
+    text-decoration: none;
+    font-style: none;
+    border-radius: 7px;
+    background: rgb(255, 218, 7);
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.157);
+}
+#logins a:hover{
+    transform: scale(1.1);
+    color: white;
+}
+#logins a:active{
+    background: rgb(240, 205, 12);
+    color: rgb(235, 240, 166);
+}
+
+#about{
+    height: 70vh;
+    background-color: rgb(255, 93, 93);
+}
+#about::before{
+    content: "";
+    width: 7em;
+    height: 7em;
+    background-color: rgb(99, 231, 169);
+    position: absolute;
+    bottom: 0;
+    right: 5em;
+    transform: rotate(45deg);
+}
+#about h3{
+    width: 100%;
+    height: 30%;
+    font-size: 5vw;
+    padding: 2%;
+    color: rgb(255, 216, 216);
+    box-sizing: border-box;
+}
+#about div{
+    height: 70%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    overflow: visible;
+}
+#about div figure{
+    width: 30%;
+    height: 90%;
+    overflow: hidden;
+    background-color: #ff9191;
+    box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.13);
+}
+#about div figure img{
+    display: block;
+    padding-top: 5%;
+    width: 15vw;
+    height: 15vw;
+    overflow: hidden;
+    margin: auto;
+}
+#about div figure figcaption{
+    padding-top: 8.5%;
+    font-size: 2vw;
+    color: rgb(255, 235, 235);
+}
+#contact{
+    height: 80vh;
+    background-color: rgb(99, 231, 169);
+}
+#contact h3{
+    padding-top: 2vh;
+    font-size: 7vw;
+    color: rgb(231, 243, 237);
+}
+#contact p{
+    font-size: 3vw;
+    color: rgb(231, 243, 237);
+    padding-top: 28vh;
+    animation: bob 1s infinite alternate cubic-bezier(0, 0.5, 0.5, 0);
+}
+footer{
+    height: fit-content;
+    color: rgb(255, 253, 135);
+    background: rgb(44, 44, 44);
+    box-sizing: border-box;
+    padding: 1%;
+}
+footer h5{
+    padding: 1%;
+    font-size: 2vw;
+}
+footer p{
+    padding: 1%;
+    font-size: 1vw;
+}

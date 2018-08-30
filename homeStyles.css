@@ -1,0 +1,29 @@
+/*Did not use variables*/
+@import url('https://fonts.googleapis.com/css?family=Muli');
+/*Generics*/
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+}
+/*animate*/
+@keyframes fadeUp{
+    from{transform: translateY(60px); opacity: 0; }
+    to{transform: none; opacity: 1;}
+}
+body{
+    background: rgb(255, 93, 93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 6vw;
+    opacity: 0;
+    animation: fadeUp 0.5s 0.3s 1 forwards;
+    color: rgb(255, 216, 216);
+}
