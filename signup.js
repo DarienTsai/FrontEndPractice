@@ -1,5 +1,8 @@
+//written in Vanilla JS
 //DOM for the signup popup
-let d=document;
+let d = document;
+
+//gets the signup box to appear
 let navSign = d.getElementById('sign-a');
 let sign = d.getElementById('log');
 
@@ -27,6 +30,7 @@ close.addEventListener(
     },
 );
 
+//switches between signing up or signing in
 let upp = d.getElementById('upp');
 let inns = d.getElementById('inn');
 let up = d.getElementById('up');
@@ -51,11 +55,17 @@ function(){
 }
 );
 
+//Navigates to home or intro after start is clicked.
 let start = d.getElementById('start-button');
 let bod = d.getElementById('bod');
 
 start.addEventListener('click',
 function(){
     over.className="in";
-    setTimeout(function(){location.assign("home.html");}, 1000);
+    if(up.className=="off"){
+        setTimeout(function(){location.assign("home.html");}, 1000);
+    }
+    else{
+        setTimeout(function(){location.assign("intro.html");}, 1000);
+    }
 });

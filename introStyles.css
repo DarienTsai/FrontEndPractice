@@ -1,0 +1,126 @@
+/*Did not use variables*/
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+/*Generics*/
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    transition-duration: 0.3s;
+    overflow: visible;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+    color: rgb(231, 243, 237);
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+	background-color: rgba(245, 245, 245, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background: rgb(255, 93, 93);
+}
+/*animate*/
+@keyframes fadeUp{
+    from{transform: translateY(60px); opacity: 0; }
+    to{transform: none; opacity: 1;}
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-2em);
+    }
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+/*styles*/
+
+/*tutorial body, placements*/
+body{
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255, 93, 93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#steps{
+    width: 35vw;
+    opacity: 0;
+    height: 75vh;
+    background-color: rgb(99, 231, 169);
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.157);
+    animation: fadeUp 1.5s 1 forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.step{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+.step img{
+    width: 80%;
+    margin: auto;
+}
+.step figcaption{
+    font-size: 2.5em;
+    padding: 1%;
+}
+#next{
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    font-size: 2.5em;
+    padding: 1.6%;
+    color: rgb(255, 255, 228);
+    text-decoration: none;
+    opacity: 0;
+    font-style: none;
+    border-radius: 7px;
+    background: rgb(255, 218, 7);
+    cursor: pointer;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.157);
+    animation: fade 1.5s 0.3s 1 forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#next:active{
+    background: rgb(240, 205, 12);
+    color: rgb(235, 240, 166);
+}
+/*Classes that change*/
+figure.off{
+    display: none;
+}
+.on{
+    opacity: 0;
+    animation: fadeUp 1.5s 0.3s 1 forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.last{
+    opacity: 1;
+    animation: fadeOut 0.7s 1 forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}

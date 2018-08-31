@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>YAW-Intro</title>
+
+        <!--Meta-->
+        <meta name="author" content="Darien Tsai">
+        <meta charset="utf-8">
+        <meta lang="eng-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--connections: icon, jQuery, CSS-->
+        <link rel="icon" type="image/png" href="yaw.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="introStyles.css">
+
+    </head>
+
+    <body>
+        <!--A tutorial introduction-->
+        <div id="viewer">
+            <!--Container for steps-->
+            <div id="steps">
+                <figure class="on step">
+                    <img src="yaw.png">
+                    <figcaption>Welcome to YAW, your public speaking tool!</figcaption>
+                </figure>
+
+                <figure class="off step">
+                    <img src="icon.png">
+                    <figcaption>Improve through messaging</figcaption>
+                </figure>
+
+
+                <figure class="off step">
+                    <img src="icon.png">
+                    <figcaption>Improve with our AI</figcaption>
+                </figure>
+
+                <figure class="off step">
+                    <img src="icon.png">
+                    <figcaption>Improve with our mentorship</figcaption>
+                </figure>
+
+                <figure class="off step">
+                    <img src="icon.png">
+                    <figcaption>Let's begin</figcaption>
+                </figure>
+            </div>
+
+            <!--next step button-->
+            <p id="next">Next</p>
+        </div>
+    </body>
+
+    <!--Scripts for incrementing steps and renavigating-->
+    <script type="text/javascript" src="intro.js"></script>
+</html>

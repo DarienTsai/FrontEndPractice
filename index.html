@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
     <head>
-        <title>Yaw-Public Speaking</title>
+        <title>YAW-Public Speaking</title>
 
         <!--Meta-->
         <meta name="author" content="Darien Tsai">
@@ -10,12 +10,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Practice. Front End only.">
 
-        <!--connections: CSS(PC media query)-->
+        <!--connections: icon, jQuery, CSS-->
+        <link rel="icon" type="image/png" href="yaw.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="indexStyles.css">
 
     </head>
     <body id="bod">
+        <!--When signing up/in, red box will come down-->
         <div id="over" class="off"></div>
+
+        <!--Sign up/in box appears over the landing page-->
         <div id="sign" class="off">
             <div id="popup">
                 <div id="controls">
@@ -40,12 +45,15 @@
                 </div>
             </div>
         </div>
+
+        <!--Navigation to parts of the page-->
         <nav>
             <a href="#about">About</a>
             <a id="sign-a">YAW</a>
             <a href="#contact">Contact</a>
         </nav>
 
+        <!--Header: lets people sign up/in-->
         <header>
             <div id="header-left"></div>
             <div id="header-right">
@@ -58,6 +66,7 @@
             </div>
         </header>
 
+        <!--About: lists features-->
         <section id="about">
             <h3>What is YAW?</h3>
             <div>
@@ -78,15 +87,19 @@
             </div>
         </section>
 
+        <!--Contact: provides a means of contacting the developers-->
         <section id="contact">
             <h3>Questions?</h3>
             <p>Too bad</p>
         </section>
 
+        <!--Footer: includes any disclaimers, copyrights, and related links-->
         <footer>
             <h5>Disclaimer</h5>
             <p>YAW is not real. I made this to practice. None of the advertized services work.</p>
         </footer>
     </body>
+
+    <!--Scripts: For the functionality-->
     <script type="text/javascript" src="signup.js"></script>
 </html>

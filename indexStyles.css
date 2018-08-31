@@ -10,7 +10,25 @@
     font-family: 'Muli', sans-serif;
     text-align: center;
 }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 10px;
+}
 
+::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+	background-color: rgba(245, 245, 245, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background: rgb(255, 93, 93);
+}
 /*animate*/
 @keyframes fadeUp{
     from{transform: translateY(60px); opacity: 0; }
@@ -74,7 +92,7 @@ input:focus{
     display: none;
 }
 .active{
-    position: absolute;
+    position: fixed;
     z-index: 3;
     top: 0;
     left: 0;
@@ -232,6 +250,7 @@ header{
     font-style: none;
     border-radius: 7px;
     background: rgb(255, 218, 7);
+    cursor: pointer;
     box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.157);
 }
 #logins a:hover{
